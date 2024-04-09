@@ -1,12 +1,12 @@
 export function Panel(props) {
-      const element = document.createElement('div');
-      element.classList.add('home-container');
-      console.log(props)
+  const element = document.createElement("div");
+  element.classList.add("home-container");
+  console.log(props);
 
-      element.innerHTML = /*html*/ `
+  element.innerHTML = /*html*/ `
             <section class="chat">
             <header class="chat__header">
-                  Grupal 
+                  Grupal
             </header>
             <main class="chat__main">
             <article class="message message--incoming">
@@ -45,7 +45,7 @@ export function Panel(props) {
                   border-radius: 1rem;
                   overflow: hidden;
             }
-            
+
             .chat__header {
                   font-weight: 900;
                   background: #DFDADA;
@@ -75,7 +75,7 @@ export function Panel(props) {
             .message--outgoing {
                   direction: rtl;
             }
-            
+
             .message--outgoing .message__text{
                   direction: ltr;
             }
@@ -95,7 +95,7 @@ export function Panel(props) {
             }
 
             .chat__footer {
-                  
+
                   background: #DFDADA;
                   position: unset;
                   padding-inline: 1rem;
@@ -111,7 +111,7 @@ export function Panel(props) {
                   font-size: 1.3rem;
             }
 
-            .chat__button { 
+            .chat__button {
                   margin-block: .5rem;
                   width: 3rem;
                   font-size: 1.3rem;
@@ -122,16 +122,10 @@ export function Panel(props) {
       </style>
       `;
 
+  element.addEventListener("load", () => {
+    /* const $texto = document.querySelector("#textoEnviar");
+    const $boton = document.querySelector("#botonEnviar"); */
+  });
 
-      element.addEventListener("load", () => {
-            
-            const $texto = document.querySelector("#textoEnviar");
-            const $boton = document.querySelector("#botonEnviar");
-
-            
-            console.log($boton, $texto);
-
-      })
-
-      return element;
+  return element;
 }
